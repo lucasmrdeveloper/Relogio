@@ -40,8 +40,18 @@
     const darkMode = () => {
         const body = document.querySelector('body')
         const boxMenu = document.querySelectorAll('.relogio')
+        const divIcon = document.querySelector('.dark-mode')
+        const icon = document.querySelector('.icon-dark')
 
         body.classList.toggle('modo-dark')
+        divIcon.classList.toggle('modo-dark')
+
+        if (divIcon.classList.contains('modo-dark')) {
+            icon.setAttribute("name", "sunny-outline")   
+        }
+        else{
+            icon.setAttribute("name", "moon-outline")   
+        }
 
         boxMenu.forEach(relogio => {
             relogio.classList.toggle('modo-dark')
