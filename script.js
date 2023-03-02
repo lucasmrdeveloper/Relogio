@@ -39,10 +39,13 @@
 
     const darkMode = () => {
         const body = document.querySelector('body')
+        const boxMenu = document.querySelectorAll('.relogio')
+
         body.classList.toggle('modo-dark')
 
-
-        console.log('body', body)
+        boxMenu.forEach(relogio => {
+            relogio.classList.toggle('modo-dark')
+        })
     }
 
 })()
