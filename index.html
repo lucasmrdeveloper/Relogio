@@ -8,25 +8,52 @@
     <link rel="stylesheet" href="style.css">
     <!--Fonte Opens Sans-->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--Tailwind-->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <main class="container">
-        <div class="box-menu">
-            <div class="menu-relogio">Relógio</div>
-            <div class="menu-despertador">Despertador</div>
-            <div class="menu-temporizador">Temporizador</div>
-            <div class="menu-cronometro">Cronômetro</div>
-        </div>
-        
-        <div class="dark-mode">
-            <ion-icon name="moon-outline" class="icon-dark"></ion-icon>
+<body class="js-dark-mode h-screen bg-blue-100 flex flex-col lg:items-center p-4">
+    <header class="flex w-full mb-8 justify-center">
+        <div class="w-8 h-8 cursor-pointer absolute left-4">
+            <ion-icon class="js-menu-hamburger w-full h-full" name="menu-outline"></ion-icon>
         </div>
 
-        <div class="box-relogio">
-            <div class="relogio relogio-hora"></div><span class="relogio-dois-pontos">:</span>
-            <div class="relogio relogio-minutos"></div><span class="relogio-dois-pontos">:</span>
-            <div class="relogio relogio-segundos"></div><span class="relogio-dois-pontos">
+
+        <div>
+            Relógio Online
         </div>
+
+        <div class="js-menu hidden w-36 absolute bg-blue-300 left-4 top-12 rounded-lg z-40">
+        </div>
+    </header>
+    
+    <main class="h-1/4 w-full flex justify-center items-center bg-red-100">
+        <div class="js-categorias hidden bg-blue-200 flex flex-col text-center rounded-md">
+            <div class="js-categorias-relogio cursor-pointer p-2">Relógio</div>
+            <div class="js-categorias-despertador  cursor-pointer p-2">Despertador</div>
+            <div class="cursor-pointer p-2">Temporizador</div>
+            <div class="cursor-pointer p-2">Cronômetro</div>
+        </div>
+        
+        <div class="js-btn-dark-mode w-8 h-8 bg-blue-200 rounded-full absolute right-4 top-4 p-1 cursor-pointer">
+            <ion-icon name="moon-outline" class="js-muda-btn-dark-mode h-full w-full"></ion-icon>
+        </div>
+
+        <div class="js-btn-resize w-8 h-8 bg-blue-200 rounded-full absolute right-16 top-4 p-1 cursor-pointer">
+            <ion-icon name="expand-outline" class="js-muda-btn-dark-mode h-full w-full"></ion-icon>
+        </div>
+
+        <div class="js-relogio w-full h-full bg-white flex rounded-md justify-center items-center p-5">
+            <div class="js-data absolute top-24"></div>
+            <div class="flex">
+                <div class="js-relogio-hora bg-blue-100 p-4 rounded-md text-4xl"></div><span class="text-5xl p-2">:</span>
+                <div class="js-relogio-minutos bg-blue-100 p-4 rounded-md text-4xl"></div><span class="text-5xl p-2">:</span>
+                <div class="js-relogio-segundos bg-blue-100 p-4 rounded-md text-4xl"></div>
+            </div>
+        </div>
+
+     
+
+
     </main>
 
     <script src="script.js"></script>
