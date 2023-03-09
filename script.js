@@ -19,12 +19,8 @@
             const containerRelogio = document.querySelector('.box-relogio')
             const container = document.querySelector('main')
             const despertador = document.querySelector('.js-despertador')
-            const divHora = document.querySelector('.js-relogio-hora')
             const categoriasRelogio = document.querySelector('.js-categorias-relogio')
-            let divMinutos = document.querySelector('.js-relogio-minutos')
-            let divSegundos = document.querySelector('.js-relogio-segundos')
-
-    
+            
             classesAdicionar()
             relogio()
 
@@ -35,22 +31,26 @@
             }
 
             function relogio() {
+                const boxHora = document.querySelector('.js-relogio-hora')
+                const boxMinutos = document.querySelector('.js-relogio-minutos')
+                const boxSegundos = document.querySelector('.js-relogio-segundos')
+
                 setInterval(() => {
                     const data = new Date()
                     const hora = data.getHours()
                     const minutos = data.getMinutes()
                     const segundos = data.getSeconds()    
     
-                    divHora.innerHTML = hora
-                    divMinutos.innerHTML = minutos
-                    divSegundos.innerHTML = segundos
+                    boxHora.innerHTML = hora
+                    boxMinutos.innerHTML = minutos
+                    boxSegundos.innerHTML = segundos
     
                     if (segundos < 10) {
-                        divSegundos.innerHTML = "0" + segundos
+                        boxSegundos.innerHTML = "0" + segundos
                     }
     
                     if (minutos < 10) {
-                        divMinutos.innerHTML = "0" + minutos
+                        boxMinutos.innerHTML = "0" + minutos
                     }
                 }, 1000)
             }
