@@ -24,10 +24,14 @@
             let divMinutos = document.querySelector('.js-relogio-minutos')
             let divSegundos = document.querySelector('.js-relogio-segundos')
 
-            despertador.classList.add('hidden')
-            container.classList.remove('h-5/6')
+    
+            classesAdicionar()
 
-            categoriasRelogio.classList.add('bg-blue-400', 'w-full', 'rounded-t-md')
+            function classesAdicionar() {
+                categoriasRelogio.classList.add('bg-blue-400', 'rounded-t-md')
+                despertador.classList.add('hidden')
+                container.classList.remove('h-5/6')
+            }
 
             setInterval(() => {
                 const data = new Date()
