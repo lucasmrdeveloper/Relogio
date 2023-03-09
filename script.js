@@ -26,6 +26,7 @@
 
     
             classesAdicionar()
+            relogio()
 
             function classesAdicionar() {
                 categoriasRelogio.classList.add('bg-blue-400', 'rounded-t-md')
@@ -33,24 +34,26 @@
                 container.classList.remove('h-5/6')
             }
 
-            setInterval(() => {
-                const data = new Date()
-                const hora = data.getHours()
-                const minutos = data.getMinutes()
-                const segundos = data.getSeconds()    
-
-                divHora.innerHTML = hora
-                divMinutos.innerHTML = minutos
-                divSegundos.innerHTML = segundos
-
-                if (segundos < 10) {
-                    divSegundos.innerHTML = "0" + segundos
-                }
-
-                if (minutos < 10) {
-                    divMinutos.innerHTML = "0" + minutos
-                }
-            }, 1000)
+            function relogio() {
+                setInterval(() => {
+                    const data = new Date()
+                    const hora = data.getHours()
+                    const minutos = data.getMinutes()
+                    const segundos = data.getSeconds()    
+    
+                    divHora.innerHTML = hora
+                    divMinutos.innerHTML = minutos
+                    divSegundos.innerHTML = segundos
+    
+                    if (segundos < 10) {
+                        divSegundos.innerHTML = "0" + segundos
+                    }
+    
+                    if (minutos < 10) {
+                        divMinutos.innerHTML = "0" + minutos
+                    }
+                }, 1000)
+            }
     }
 
     const despertador = () => {  
