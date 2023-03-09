@@ -39,8 +39,6 @@
                 divMinutos.innerHTML = minutos
                 divSegundos.innerHTML = segundos
 
-                console.log('div minutos', divMinutos.textContent)
-
                 if (segundos < 10) {
                     divSegundos.innerHTML = "0" + segundos
                 }
@@ -67,9 +65,6 @@
         despertador.classList.add('mt-8')
 
         let minutos = document.querySelector('.js-relogio-minutos').textContent
-
-        console.log('minutos', minutos)
-    
     }
 
     const data = () => {
@@ -92,8 +87,6 @@
 
         const atributo = icon.getAttribute('name')
 
-        // console.log('atributo', atributo)
-
         btndarkMode.addEventListener('click', teste)
       
         const dark = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -104,39 +97,13 @@
                 icon.setAttribute('name', 'sunny')
                 body.style.background = 'black'
                 body.setAttribute('modo-dark', 'ativado')
-
-                console.log('body', body.getAttribute('modo-dark'))
             }
 
            else {
                 icon.setAttribute('name', 'moon')
                 body.style.background = 'white'
             }
-
-
-     
-            // else if(atributo )){
-            //     body.style.background = 'blue'
-            //     console.lgo*('não é darik')
-            // }
         }
-
-        console.log('icon', )
-
-        // if(window.matchMedia("prefers-color-scheme: dark") == true) {
-        //     console.log('funciona')
-        // }
-        // else {
-        //     console.log('não funciona')
-        // }
-
-        // if (divIcon.classList.contains('modo-dark')) {
-        //     icon.setAttribute("name", "sunny-outline")   
-        // }
-        // else{
-        //     icon.setAttribute("name", "moon-outline")   
-        // }
-
     }
 
     const menuHamburger = () => {
