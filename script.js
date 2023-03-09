@@ -6,7 +6,7 @@
         // categoriasRelogio.addEventListener('click', relogio)
         // categoriasDespertador.addEventListener('click', despertador)
 
-        relogio()
+        relogioGeral()
         despertador()
 
         data()
@@ -15,7 +15,7 @@
         resize()
     })
 
-    const relogio = () => {
+    const relogioGeral = () => {
             const containerRelogio = document.querySelector('.box-relogio')
             const container = document.querySelector('main')
             const despertador = document.querySelector('.js-despertador')
