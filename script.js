@@ -6,12 +6,12 @@
         // categoriasRelogio.addEventListener('click', relogio)
         // categoriasDespertador.addEventListener('click', despertador)
 
+        menuHamburgerRWD()
         relogioGeral()
         despertador()
 
         data()
         darkMode()
-        menuHamburger()
         resize()
     })
 
@@ -113,21 +113,17 @@
         }
     }
 
-    const menuHamburger = () => {
-        const menuIcone = document.querySelector('.js-menu-hamburger')
+    const menuHamburgerRWD = () => {
+        const menuIcone = document.querySelector('.js-icone-menu-hamburger')
         const menu = document.querySelector('.js-menu')
         const categorias = document.querySelector('.js-categorias')
 
+        menuIcone.addEventListener('click', toggleMenu)
 
-        menuIcone.addEventListener('click', teste)
-
-
-        function teste() {
-            menu.classList.toggle('hidden')
-            menu.classList.toggle('inline-block')
+        function toggleMenu() {
             categorias.classList.remove('hidden')
 
-
+            menu.classList.toggle('hidden')
             menu.append(categorias)
         }
     }
