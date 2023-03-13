@@ -16,44 +16,44 @@
     })
 
     const relogioGeral = () => {
-            const containerRelogio = document.querySelector('.box-relogio')
-            const container = document.querySelector('main')
-            const despertador = document.querySelector('.js-despertador')
-            const categoriasRelogio = document.querySelector('.js-categorias-relogio')
-            
-            classesAdicionar()
-            relogio()
+        const containerRelogio = document.querySelector('.box-relogio')
+        const container = document.querySelector('main')
+        const despertador = document.querySelector('.js-despertador')
+        const categoriasRelogio = document.querySelector('.js-categorias-relogio')
+        
+        classesAdicionar()
+        relogio()
 
-            function classesAdicionar() {
-                categoriasRelogio.classList.add('bg-blue-400', 'rounded-t-md')
-                despertador.classList.add('hidden')
-                container.classList.remove('h-5/6')
-            }
+        function classesAdicionar() {
+            categoriasRelogio.classList.add('bg-blue-400', 'rounded-t-md')
+            despertador.classList.add('hidden')
+            container.classList.remove('h-5/6')
+        }
 
-            function relogio() {
-                const boxHora = document.querySelector('.js-relogio-hora')
-                const boxMinutos = document.querySelector('.js-relogio-minutos')
-                const boxSegundos = document.querySelector('.js-relogio-segundos')
+        function relogio() {
+            const boxHora = document.querySelector('.js-relogio-hora')
+            const boxMinutos = document.querySelector('.js-relogio-minutos')
+            const boxSegundos = document.querySelector('.js-relogio-segundos')
 
-                setInterval(() => {
-                    const data = new Date()
-                    const hora = data.getHours()
-                    const minutos = data.getMinutes()
-                    const segundos = data.getSeconds()    
-    
-                    boxHora.innerHTML = hora
-                    boxMinutos.innerHTML = minutos
-                    boxSegundos.innerHTML = segundos
-    
-                    if (segundos < 10) {
-                        boxSegundos.innerHTML = "0" + segundos
-                    }
-    
-                    if (minutos < 10) {
-                        boxMinutos.innerHTML = "0" + minutos
-                    }
-                }, 1000)
-            }
+            setInterval(() => {
+                const data = new Date()
+                const hora = data.getHours()
+                const minutos = data.getMinutes()
+                const segundos = data.getSeconds()    
+
+                boxHora.innerHTML = hora
+                boxMinutos.innerHTML = minutos
+                boxSegundos.innerHTML = segundos
+
+                if (segundos < 10) {
+                    boxSegundos.innerHTML = "0" + segundos
+                }
+
+                if (minutos < 10) {
+                    boxMinutos.innerHTML = "0" + minutos
+                }
+            }, 1000)
+        }
     }
 
     const despertador = () => {  
