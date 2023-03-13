@@ -114,11 +114,11 @@
     }
 
     const menuHamburgerRWD = () => {
-        const menuIcone = document.querySelector('.js-icone-menu-hamburger')
+        const btnMenuHamburger = document.querySelector('.js-icone-menu-hamburger')
         const menu = document.querySelector('.js-menu')
         const categorias = document.querySelector('.js-categorias')
 
-        menuIcone.addEventListener('click', toggleMenu)
+        btnMenuHamburger.addEventListener('click', toggleMenu)
 
         function toggleMenu() {
             categorias.classList.remove('hidden')
